@@ -29,28 +29,19 @@ nav ul li:hover {
 }
 /* Navbar CSS */
 nav {
-   ...
+  display: flex;
 }
 
 nav h2 {
-   ...
+  color: white;
 }
 
 nav ul {
-   ...
+  list-style: none;
 }
 
-/* Paste the Hero CSS here */
 #home {
-   ...
-}
-
-#home h1 {
-   ...
-}
-
-#home h2 {
-   ...
+  padding: 50px;
 }
 #about {
   padding: 80px 10%;
