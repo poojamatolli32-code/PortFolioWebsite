@@ -11,7 +11,7 @@ function Hero() {
       transition={{ duration: 1 }}
     >
       <div className="hero-text">
-        <h1>Hello, I'm Pooja Matolli</h1>
+        <h1 className="typing-text">Hello, I'm Pooja Matolli</h1>
 
         <h2>Full Stack Developer</h2>
 

@@ -9,7 +9,7 @@ function Navbar({ darkMode, setDarkMode }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2>My Portfolio</h2>
+      <h2>Puja</h2>
 
       <ul>
         <li><a href="#home">Home</a></li>

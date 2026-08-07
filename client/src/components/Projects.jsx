@@ -1,45 +1,41 @@
-import { motion } from "framer-motion";
-
 function Projects() {
+  const projects = [
+    {
+      name: "Lightweight Professional Networking Platform",
+      description:
+        "A professional networking platform designed to connect users, build professional profiles, and explore career opportunities.",
+      link: "#",
+    },
+    {
+      name: "HR Analytics System",
+      description:
+        "An HR analytics system that helps manage employee information and provides useful insights for better decision-making.",
+      link: "#",
+    },
+    {
+      name: "My Portfolio",
+      description:
+        "A personal portfolio website showcasing my skills, projects, education, certificates, and contact information.",
+      link: "#",
+    },
+  ];
+
   return (
     <section id="projects">
       <h2>My Projects</h2>
 
       <div className="projects-container">
+        {projects.map((project) => (
+          <div className="project-card" key={project.name}>
+            <h3>{project.name}</h3>
 
-        <motion.div
-          className="project-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <h3>Portfolio Website</h3>
-          <p>
-            A responsive portfolio website built using React, HTML, CSS, and JavaScript.
-          </p>
-          <button>View Project</button>
-        </motion.div>
+            <p>{project.description}</p>
 
-        <motion.div
-          className="project-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <h3>Weather App</h3>
-          <p>
-            Displays real-time weather information using an API.
-          </p>
-          <button>View Project</button>
-        </motion.div>
-
-        <motion.div
-          className="project-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <h3>To-Do List</h3>
-          <p>
-            A task management application with add, edit, and delete features.
-          </p>
-          <button>View Project</button>
-        </motion.div>
-
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <button>View Project</button>
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

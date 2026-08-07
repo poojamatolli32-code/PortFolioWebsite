@@ -1,73 +1,76 @@
-import { useState } from "react";
-import axios from "axios";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await axios.post("http://localhost:5000/api/contact", formData);
-
-      alert("Message sent successfully!");
-
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      alert("Failed to send message.");
-      console.error(error);
-    }
-  };
-
   return (
     <section id="contact">
       <h2>Contact Me</h2>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+      <div className="contact-container">
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        {/* Contact Form */}
+        <div className="contact-card">
+          <h3>Send Me a Message</h3>
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="5"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
+          <form>
+            <input
+              type="text"
+              placeholder="Your Name"
+              required
+            />
 
-        <button type="submit">Send Message</button>
-      </form>
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <textarea
+              placeholder="Your Message"
+              rows="6"
+              required
+            ></textarea>
+
+            <button type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        {/* Contact Links */}
+        <div className="contact-info">
+          <h3>How You Can Contact Me</h3>
+
+          <div className="contact-icons">
+
+            <a
+              href="mailto:your-email@gmail.com"
+              title="Email"
+            >
+              <FaEnvelope />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <FaGithub />
+            </a>
+
+          </div>
+        </div>
+
+      </div>
     </section>
   );
 }
