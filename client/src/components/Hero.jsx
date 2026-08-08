@@ -26,7 +26,7 @@ function Hero() {
       </div>
 
       <div className="hero-image">
-        <img src={profile} alt="Profile" />
+        <img src={profile} alt="Pooja" />
       </div>
     </motion.section>
   );
