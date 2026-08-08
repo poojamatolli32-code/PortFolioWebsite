@@ -4,26 +4,22 @@ function About() {
       <h2>About Me</h2>
 
       <div className="about-card">
-        <div className="about-introduction">
-          <h3>👋 Introduction</h3>
-          <p>
-            Hi, I'm Pooja, a passionate web developer who enjoys creating
-            modern, responsive, and user-friendly websites. I love learning
-            new technologies and turning ideas into interactive web
-            experiences.
-          </p>
-        </div>
+        <h3>Introduction</h3>
 
-        <div className="about-focus">
-          <h3>🎯 Focusing On</h3>
+        <p>
+          I am a passionate web developer interested in creating modern,
+          responsive, and user-friendly websites using React, HTML, CSS,
+          JavaScript, Node.js, and MongoDB.
+        </p>
 
-          <div className="focus-items">
-            <span>Web Development</span>
-            <span>React</span>
-            <span>JavaScript</span>
-            <span>UI Design</span>
-            <span>Responsive Websites</span>
-          </div>
+        <h3>Focusing On</h3>
+
+        <div className="focus-items">
+          <span>Web Development</span>
+          <span>React</span>
+          <span>UI/UX</span>
+          <span>Backend Development</span>
+          <span>Database</span>
         </div>
       </div>
     </section>

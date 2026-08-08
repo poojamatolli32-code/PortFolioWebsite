@@ -9,7 +9,7 @@ function Navbar({ darkMode, setDarkMode }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2>Puja</h2>
+      <h2>Pooja</h2>
 
       <ul>
         <li><a href="#home">Home</a></li>
@@ -21,12 +21,10 @@ function Navbar({ darkMode, setDarkMode }) {
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button
-        className="theme-btn"
-        onClick={() => setDarkMode(!darkMode)}
-      >
-        {darkMode ? <FaSun /> : <FaMoon />}
-      </button>
+      <a href="#about" className="take-look">
+  Take a Look →
+</a>
+      
     </motion.nav>
   );
 }
