@@ -390,95 +390,223 @@ footer {
   text-align: center;
   padding: 20px;
 }
-.hero{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px 10%;
-  gap:50px;
-}
+/* =========================
+   HOME / HERO SECTION
+========================= */
 
-.hero-text{
-  flex:1;
-}
-
-.hero-image img{
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  object-fit:cover;
-}
 .hero {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 10%;
-  min-height: 100vh;
+  gap: 50px;
+  padding: 120px 8% 80px;
+
+  background: linear-gradient(
+    135deg,
+    #07152f 0%,
+    #101b4d 45%,
+    #24145c 100%
+  );
+
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
-  flex: 1;
+/* Glow behind home section */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(0, 200, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(100px);
+  top: 10%;
+  left: 5%;
 }
 
-.hero-content h1 {
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(170, 70, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(100px);
+  bottom: 5%;
+  right: 5%;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero-text h1 {
   font-size: 48px;
   margin-bottom: 15px;
 }
 
-.hero-content h2 {
+.hero-text h1 span {
+  color: #20d9ff;
+  text-shadow: 0 0 15px rgba(32, 217, 255, 0.7);
+}
+
+.hero-text h2 {
   font-size: 28px;
-  color: #38bdf8;
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  max-width: 500px;
-  line-height: 1.7;
+.hero-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
+
+
+/* =========================
+   RESUME + SOCIAL ICONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Resume */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 22px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  border: 1px solid #28d9ff;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 217, 255, 0.2),
+    rgba(150, 70, 255, 0.2)
+  );
+
+  box-shadow:
+    0 0 10px rgba(0, 217, 255, 0.4),
+    inset 0 0 10px rgba(150, 70, 255, 0.15);
+
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 20px rgba(0, 217, 255, 0.8),
+    0 0 35px rgba(150, 70, 255, 0.4);
+}
+
+
+/* LinkedIn + GitHub */
+.social-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 18px;
+
+  border: 1px solid #27d9ff;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 217, 255, 0.15),
+    rgba(150, 70, 255, 0.2)
+  );
+
+  box-shadow:
+    0 0 8px rgba(0, 217, 255, 0.35),
+    inset 0 0 8px rgba(150, 70, 255, 0.15);
+
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #20d9ff;
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow:
+    0 0 18px rgba(0, 217, 255, 0.8),
+    0 0 25px rgba(150, 70, 255, 0.5);
+}
+
+
+/* =========================
+   HOME IMAGE
+========================= */
 
 .hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+
   object-fit: cover;
-  border: 5px solid #38bdf8;
-}
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 10%;
-}
 
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
-}
-
-.hero-text h3 {
-  color: #38bdf8;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  line-height: 1.8;
-}
-
-.hero-image img {
-  width: 350px;
   border-radius: 50%;
-  border: 5px solid #38bdf8;
+
+  border: 2px solid #24d9ff;
+
+  box-shadow:
+    0 0 20px rgba(0, 217, 255, 0.6),
+    0 0 50px rgba(150, 70, 255, 0.4);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text h2 {
+    font-size: 23px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
 }
 nav {
   display: flex;

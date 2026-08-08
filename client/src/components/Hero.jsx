@@ -12,7 +12,7 @@ function Hero() {
     >
       <div className="hero-text">
         <h1 className="typing-text">
-          Hello, I'm Pooja Matolli
+          Hello, I'm <span>Pooja Matolli</span>
         </h1>
 
         <h2>Full Stack Developer</h2>
@@ -22,9 +22,14 @@ function Hero() {
           using React, Node.js, Express and MongoDB.
         </p>
 
-        <div className="hero-buttons">
+        <div className="hero-actions">
           {/* Resume */}
-          <a href="/resume.pdf" className="resume-btn">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-btn"
+          >
             Resume
           </a>
 
@@ -36,7 +41,7 @@ function Hero() {
             className="social-icon"
             aria-label="LinkedIn"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin-in"></i>
           </a>
 
           {/* GitHub */}
