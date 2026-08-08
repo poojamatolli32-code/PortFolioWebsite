@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg";
 
 function Hero() {
   return (
@@ -26,7 +25,7 @@ function Hero() {
       </div>
 
       <div className="hero-image">
-        <img src={profile} alt="Profile" />
+        
       </div>
     </motion.section>
   );
