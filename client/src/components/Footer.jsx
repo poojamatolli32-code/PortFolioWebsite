@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>© 2026 Your Name | All Rights Reserved.</p>
+      <p>© 2026 Pooja, Designed & Developed by Pooja Matolli</p>
     </footer>
   );
 }

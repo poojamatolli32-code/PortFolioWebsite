@@ -19,10 +19,26 @@ function Hero() {
           Passionate about building responsive and modern web applications
           using React, Node.js, Express and MongoDB.
         </p>
+        <div className="social-links">
+  <a
+    href="https://www.linkedin.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    <i className="fab fa-linkedin"></i>
+  </a>
 
-        <a href="/resume.pdf" download>
-          <button>Download Resume</button>
-        </a>
+  <a
+    href="https://github.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+  >
+    <i className="fab fa-github"></i>
+  </a>
+</div>
+
       </div>
 
       <div className="hero-image">
