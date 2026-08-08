@@ -1162,3 +1162,21 @@ nav a:hover {
   transform: translateY(-5px) scale(1.08);
   box-shadow: 0 0 25px rgba(56, 189, 248, 0.9);
 }
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+
+  background: linear-gradient(90deg, #38bdf8, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+#home {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 30%, #2563eb, transparent 40%),
+    radial-gradient(circle at 80% 70%, #9333ea, transparent 40%),
+    #050816;
+}

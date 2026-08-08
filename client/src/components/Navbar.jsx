@@ -9,7 +9,7 @@ function Navbar({ darkMode, setDarkMode }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2>Pooja</h2>
+      <h2 className="logo">Pooja</h2>
 
       <ul>
         <li><a href="#home">Home</a></li>

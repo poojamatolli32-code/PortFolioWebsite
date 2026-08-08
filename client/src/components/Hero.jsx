@@ -28,6 +28,10 @@ function Hero() {
   >
     <i className="fab fa-linkedin"></i>
   </a>
+  <div className="hero-buttons">
+  <a href="/resume.pdf" className="resume-btn">
+    Resume
+  </a>
 
   <a
     href="https://github.com/"
@@ -47,5 +51,6 @@ function Hero() {
     </motion.section>
   );
 }
+
 
 export default Hero;
