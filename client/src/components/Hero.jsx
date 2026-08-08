@@ -11,7 +11,9 @@ function Hero() {
       transition={{ duration: 1 }}
     >
       <div className="hero-text">
-        <h1 className="typing-text">Hello, I'm Pooja Matolli</h1>
+        <h1 className="typing-text">
+          Hello, I'm Pooja Matolli
+        </h1>
 
         <h2>Full Stack Developer</h2>
 
@@ -19,30 +21,35 @@ function Hero() {
           Passionate about building responsive and modern web applications
           using React, Node.js, Express and MongoDB.
         </p>
-        <div className="social-links">
-  <a
-    href="https://www.linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <i className="fab fa-linkedin"></i>
-  </a>
-  <div className="hero-buttons">
-  <a href="/resume.pdf" className="resume-btn">
-    Resume
-  </a>
 
-  <a
-    href="https://github.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-  >
-    <i className="fab fa-github"></i>
-  </a>
-</div>
+        <div className="hero-buttons">
+          {/* Resume */}
+          <a href="/resume.pdf" className="resume-btn">
+            Resume
+          </a>
 
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="LinkedIn"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label="GitHub"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
       </div>
 
       <div className="hero-image">
@@ -51,6 +58,5 @@ function Hero() {
     </motion.section>
   );
 }
-
 
 export default Hero;
